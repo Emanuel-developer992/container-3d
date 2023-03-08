@@ -15,13 +15,11 @@ export default function App() {
 
   function Box(props) {
 
-    useFrame(() => {
-      //const a = clock.getElapsedTime()
-      //myMesh.current.rotation.y = 
+    useFrame(({clock}) => {
+      const a = clock.getElapsedTime() 
 
-
-      myMesh.current.rotation.y = locationX/20;
-      myMesh.current.rotation.x = locationY/20;
+      myMesh.current.rotation.y = a/2;
+      myMesh.current.rotation.x = a/2;
    
       
     })
